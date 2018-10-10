@@ -1,5 +1,0 @@
-package abc
-
-class gfd {
-
-}
