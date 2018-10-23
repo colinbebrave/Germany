@@ -1,5 +1,7 @@
 package spark_streaming
 
+//https://stdatalabs.com/2016/09/running-apache-spark-on-eclipse/
+
 import org.apache.spark.streaming._
 import org.apache.spark.SparkContext._
 import org.apache.spark.{SparkContext, SparkConf}

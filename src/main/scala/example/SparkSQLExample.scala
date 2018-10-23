@@ -1,6 +1,7 @@
 package org.apache.spark.examples.sql
 
 import org.apache.spark.sql.Row
+import org.apache.spark.sql.expressions.UserDefinedAggregateFunction
 // $example on:init_session$
 import org.apache.spark.sql.SparkSession
 // $example off:init_session$
@@ -9,6 +10,7 @@ import org.apache.spark.sql.SparkSession
 import org.apache.spark.sql.types._
 // $example off:data_types$
 // $example off:programmatic_schema$
+import org.apache.spark.sql.expressions.{MutableAggregationBuffer, UserDefinedFunction}
 
 object SparkSQLExample {
 
@@ -254,5 +256,25 @@ object SparkSQLExample {
         // | Name: Justin|
         // +-------------+
         // $example off:programmatic_schema$
+
+        val userDF = spark.read.load("users.parquet")
+        userDF.select("name", "favorite_color").write.save("colors.parquet")
+
+        val peopleDF = spark.read.format("json").load("people.json")
+
+        val peopleDFCSV = spark.read.format("csv")
+          .option("sep", ";")
+          .option("inferSchema", "true")
+          .option("header", "true")
+          .load("people.csv")
+
+
+
+
+
+        //Bucketing, Sorting and Partitioning
+        peopleDF.write
     }
 }
+
+
