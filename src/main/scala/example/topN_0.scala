@@ -3,7 +3,7 @@ import org.apache.spark.{SparkConf, SparkContext}
 
 object topN_0 {
     val sc = new SparkContext()
-    val data = sc.textFile("/Users/wangqi/Desktop/ip_example.txt")
+    val data = sc.textFile("ip_example.txt")
     data.map(line=>"""\d+\.\d+\.\d+\.\d+""".r.findAllIn(line).mkString)
       .filter(_!="")
       .map(word=>(word,1))

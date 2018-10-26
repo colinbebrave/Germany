@@ -15,3 +15,4 @@ object chapter8_ml_classification_and_clustering {
       catch { case _ : Throwable => x }))
 
 }
+
