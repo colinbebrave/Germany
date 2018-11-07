@@ -1,11 +1,10 @@
 package Scala_and_Spark_for_Big_Data_Analysis
 
-import org.apache.spark.sql.SparkSession
-import org.apache.spark.rdd.RDD
-import org.apache.spark.sql.types.{FloatType, StringType, StructField, StructType}
 import org.apache.spark.ml.classification.{BinaryLogisticRegressionSummary, LogisticRegression}
-import org.apache.spark.ml.evaluation.BinaryClassificationEvaluator
 import org.apache.spark.ml.feature.{StringIndexer, VectorAssembler}
+import org.apache.spark.rdd.RDD
+import org.apache.spark.sql.SparkSession
+import org.apache.spark.sql.types.{FloatType, StructType}
 
 //to convert string to integer in scala spark dataframe
 import org.apache.spark.sql.types.IntegerType
@@ -156,13 +155,13 @@ object chapter11_LR {
     val trueP = lp.filter($"prediction" === 0.0).filter($"label" === $"prediction").count()
     val ratiowrong = wrong.toDouble / counttotal.toDouble
 
-
-    val fMeasure = binarySummary.fMeasureByThreshold
-    val fm = fMeasure.col("F-Measure")
-    val maxFMeasure = fMeasure.select(max("F-Measure")).head().getDouble(0)
-    val bestThreshold = fMeasure.where($"F-Measure" === maxFMeasure).select("threshold").head().getDouble(0) model.setThreshold(bestThreshold)
-
-    val evaluator = new BinaryClassificationEvaluator().setLabelCol("label") val accuracy = evaluator.evaluate(predictions) println("Accuracy: " + accuracy)
+//
+//    val fMeasure = binarySummary.fMeasureByThreshold
+//    val fm = fMeasure.col("F-Measure")
+//    val maxFMeasure = fMeasure.select(max("F-Measure")).head().getDouble(0)
+//    val bestThreshold = fMeasure.where($"F-Measure" === maxFMeasure).select("threshold").head().getDouble(0) model.setThreshold(bestThreshold)
+//
+//    val evaluator = new BinaryClassificationEvaluator().setLabelCol("label") val accuracy = evaluator.evaluate(predictions) println("Accuracy: " + accuracy)
 }
 
 

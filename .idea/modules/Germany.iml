@@ -14,6 +14,8 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="sbt: org.scala-lang:scala-library:2.11.8:jar" level="project" />
+    <orderEntry type="library" name="sbt: org.nlpcn:nlp-lang:1.7.7:jar" level="project" />
+    <orderEntry type="library" name="sbt: org.ansj:ansj_seg:5.1.6:jar" level="project" />
     <orderEntry type="library" name="sbt: stax:stax-api:1.0.1:jar" level="project" />
     <orderEntry type="library" name="sbt: org.typelevel:macro-compat_2.11:1.1.1:jar" level="project" />
     <orderEntry type="library" name="sbt: org.typelevel:machinist_2.11:0.6.1:jar" level="project" />
@@ -98,7 +100,6 @@
     <orderEntry type="library" name="sbt: com.google.code.gson:gson:2.2.4:jar" level="project" />
     <orderEntry type="library" name="sbt: com.google.guava:guava:11.0.2:jar" level="project" />
     <orderEntry type="library" name="sbt: com.google.inject:guice:3.0:jar" level="project" />
-    <orderEntry type="library" name="sbt: com.google.protobuf:protobuf-java:2.5.0:jar" level="project" />
     <orderEntry type="library" name="sbt: com.jamesmurty.utils:java-xmlbuilder:1.1:jar" level="project" />
     <orderEntry type="library" name="sbt: com.ning:compress-lzf:1.0.3:jar" level="project" />
     <orderEntry type="library" name="sbt: com.thoughtworks.paranamer:paranamer:2.8:jar" level="project" />
@@ -127,8 +128,6 @@
     <orderEntry type="library" name="sbt: javax.servlet:javax.servlet-api:3.1.0:jar" level="project" />
     <orderEntry type="library" name="sbt: javax.validation:validation-api:1.1.0.Final:jar" level="project" />
     <orderEntry type="library" name="sbt: javax.ws.rs:javax.ws.rs-api:2.0.1:jar" level="project" />
-    <orderEntry type="library" name="sbt: javax.xml.bind:jaxb-api:2.2.2:jar" level="project" />
-    <orderEntry type="library" name="sbt: javax.xml.stream:stax-api:1.0-2:jar" level="project" />
     <orderEntry type="library" name="sbt: jline:jline:0.9.94:jar" level="project" />
     <orderEntry type="library" name="sbt: log4j:log4j:1.2.17:jar" level="project" />
     <orderEntry type="library" name="sbt: net.iharder:base64:2.3.8:jar" level="project" />
@@ -230,5 +229,19 @@
         </SOURCES>
       </library>
     </orderEntry>
+    <orderEntry type="library" name="sbt: com.apple:AppleJavaExtensions:1.4:jar" level="project" />
+    <orderEntry type="library" name="sbt: com.google.protobuf:protobuf-java:3.2.0:jar" level="project" />
+    <orderEntry type="library" name="sbt: com.googlecode.efficient-java-matrix-library:ejml:0.23:jar" level="project" />
+    <orderEntry type="library" name="sbt: com.io7m.xom:xom:1.2.10:jar" level="project" />
+    <orderEntry type="library" name="sbt: de.jollyday:jollyday:0.4.9:jar" level="project" />
+    <orderEntry type="library" name="sbt: edu.stanford.nlp:stanford-corenlp:3.9.1:jar" level="project" />
+    <orderEntry type="library" name="sbt: javax.xml.bind:jaxb-api:2.2.7:jar" level="project" />
+    <orderEntry type="library" name="sbt: org.apache.lucene:lucene-analyzers-common:4.10.3:jar" level="project" />
+    <orderEntry type="library" name="sbt: org.apache.lucene:lucene-core:4.10.3:jar" level="project" />
+    <orderEntry type="library" name="sbt: org.apache.lucene:lucene-queries:4.10.3:jar" level="project" />
+    <orderEntry type="library" name="sbt: org.apache.lucene:lucene-queryparser:4.10.3:jar" level="project" />
+    <orderEntry type="library" name="sbt: org.apache.lucene:lucene-sandbox:4.10.3:jar" level="project" />
+    <orderEntry type="library" name="sbt: org.glassfish:javax.json:1.0.4:jar" level="project" />
+    <orderEntry type="library" name="sbt: xalan:xalan:2.7.0:jar" level="project" />
   </component>
 </module>
