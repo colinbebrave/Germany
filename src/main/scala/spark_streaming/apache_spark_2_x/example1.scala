@@ -1,4 +1,5 @@
-package StreamingLogisticRegressionSGD
+package spark_streaming.apache_spark_2_x
+
 import org.apache.spark.mllib.classification.StreamingLogisticRegressionWithSGD
 import org.apache.spark.mllib.linalg.Vectors
 import org.apache.spark.mllib.regression.LabeledPoint

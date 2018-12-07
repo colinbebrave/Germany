@@ -1,4 +1,4 @@
-//package nlp_spark
+package nlp
 
 import org.apache.spark.ml.classification.NaiveBayes
 import org.apache.spark.ml.evaluation.MulticlassClassificationEvaluator
@@ -7,7 +7,7 @@ import org.apache.spark.sql.SparkSession
 import org.apache.spark.sql.types.DoubleType
 
 
-object naive_bayes_training {
+object naive_bayes_with_sougouyuliao {
 
     def main(args: Array[String]): Unit = {
         val spark = SparkSession
@@ -18,7 +18,7 @@ object naive_bayes_training {
 
         import spark.implicits._
 
-        val srcDF = spark.sparkContext.textFile("/Users/wangqi/Documents/Java/Germany/src/main/scala/nlp_spark/sougou_yuliao/").map{x =>
+        val srcDF = spark.sparkContext.textFile("/Users/wangqi/Documents/Java/Germany/src/main/scala/nlp/sougou_yuliao/").map{x =>
             var data = x.split(",")
             (data(0), data(1))
         }.toDF("category", "text")
@@ -57,7 +57,6 @@ object naive_bayes_training {
         val accuracy = evaluator.evaluate(predictions)
 
         println(s"Test set accuracy = $accuracy")
-
         spark.stop()
     }
 }

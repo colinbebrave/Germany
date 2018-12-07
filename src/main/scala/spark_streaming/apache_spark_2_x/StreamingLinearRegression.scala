@@ -1,4 +1,4 @@
-package spark_streaming.apache_spark_2_x
+package spark_streaming
 
 import org.apache.log4j.{Level, Logger}
 import org.apache.spark.mllib.linalg.Vectors
